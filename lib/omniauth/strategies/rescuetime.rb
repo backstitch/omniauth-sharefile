@@ -1,4 +1,6 @@
-require 'omniauth-oauth2'
+require 'omniauth/strategies/oauth2'
+require 'base64'
+require 'rack/utils'
 
 module OmniAuth
   module Strategies
@@ -12,16 +14,16 @@ module OmniAuth
         :token_url     => 'https://www.rescuetime.com/oauth/token',
       }
 
-      uid { raw_info["user"]["id"] }
-
-      info do
-        {
-          :email    => raw_info["user"]["email"],
-          :name     => raw_info["user"]["display_name"],
-          :nickname => raw_info["user"]["username"],
-          :image    => raw_info["user"]["avatar"]
-        }
-      end
+      # uid { raw_info["user"]["id"] }
+      # 
+      # info do
+      #   {
+      #     :email    => raw_info["user"]["email"],
+      #     :name     => raw_info["user"]["display_name"],
+      #     :nickname => raw_info["user"]["username"],
+      #     :image    => raw_info["user"]["avatar"]
+      #   }
+      # end
 
       extra { raw_info["user"] }
 
