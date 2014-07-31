@@ -14,11 +14,10 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "semantic_types"
-  gem.homepage = "http://github.com/jwarzech/semantic_types"
+  gem.name = "omniauth-rescuetime"
+  gem.homepage = "http://github.com/swarzech/omniauth-rescuetime"
   gem.license = "Proprietary"
-  gem.summary = %Q{Semantic data types library}
-  gem.description = %Q{This library provides semantic data types to provide meaning to parameters and return values within backstitch}
+  gem.summary = %Q{RescueTime Omniauth stratagy}
   gem.email = "admin@backstit.ch"
   gem.authors = ["backstitch Inc."]
   gem.files.exclude "spec/*"
@@ -39,10 +38,10 @@ task :default => :spec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  version = File.exist?('lib/omniauth-rescuetime/version.rb') ? File.read('lib/omniauth-rescuetime/version.rb') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "semantic_types #{version}"
+  rdoc.title = "omniauth-rescuetime #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
