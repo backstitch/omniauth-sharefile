@@ -3,7 +3,7 @@ require 'multi_json'
 
 module OmniAuth
   module Strategies
-    class RescueTime < OmniAuth::Strategies::OAuth2
+    class Rescuetime < OmniAuth::Strategies::OAuth2
 
       option :name, :rescuetime
 
