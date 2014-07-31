@@ -20,12 +20,13 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "RELEASE_NOTES.md",
     "Rakefile",
+    "VERSION",
     "lib/omniauth-rescuetime.rb",
     "lib/omniauth-rescuetime/version.rb",
     "lib/omniauth/strategies/rescuetime.rb",
-    "semantic_types.gemspec"
+    "omniauth-rescuetime.gemspec"
   ]
-  s.homepage = "http://github.com/swarzech/omniauth-rescuetime"
+  s.homepage = "http://github.com/backstitch/omniauth-rescuetime"
   s.licenses = ["Proprietary"]
   s.require_paths = ["lib"]
   s.rubygems_version = "2.0.6"

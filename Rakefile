@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "omniauth-rescuetime"
-  gem.homepage = "http://github.com/swarzech/omniauth-rescuetime"
+  gem.homepage = "http://github.com/backstitch/omniauth-rescuetime"
   gem.license = "Proprietary"
   gem.summary = %Q{RescueTime Omniauth stratagy}
   gem.email = "admin@backstit.ch"
