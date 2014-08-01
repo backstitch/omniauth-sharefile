@@ -30,6 +30,7 @@ module OmniAuth
       extra { raw_info }
 
       def raw_info
+        Rails.logger.info @raw_info
         @raw_info# ||= access_token.get("https://api.cloudsdale.org/v2/me.json").parsed
       end
 
