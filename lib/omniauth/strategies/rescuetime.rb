@@ -11,9 +11,9 @@ module OmniAuth
       option :name, :rescuetime
 
       option :client_options, {
-        :site          => 'https://www.rescuetime.com/',
-        :authorize_url => 'https://www.rescuetime.com/oauth/authorize',
-        :token_url     => '/oauth/token',
+        :site          => 'https://www.rescuetime.com/api/oauth/data/',
+        :authorize_url => 'https://www.rescuetime.com/oauth/authorize/',
+        :token_url     => 'https://www.rescuetime.com/oauth/token/',
       }
 
       # uid { raw_info["user"]["id"] }
