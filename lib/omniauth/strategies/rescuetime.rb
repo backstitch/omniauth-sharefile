@@ -1,5 +1,8 @@
-require 'omniauth-oauth2'
-require 'multi_json'
+require 'omniauth/strategies/oauth2'
+require 'base64'
+require 'openssl'
+require 'rack/utils'
+require 'uri'
 
 module OmniAuth
   module Strategies
@@ -10,7 +13,7 @@ module OmniAuth
       option :client_options, {
         :site          => 'https://www.rescuetime.com/api/oauth/data',
         :authorize_url => 'https://www.rescuetime.com/oauth/authorize',
-        # :token_url     => 'https://www.rescuetime.com/oauth/access_token',
+        :token_url     => 'https://www.rescuetime.com/oauth/token',
       }
 
       # uid { raw_info["user"]["id"] }
