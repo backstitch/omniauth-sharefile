@@ -16,7 +16,7 @@ module OmniAuth
         :token_url     => 'https://secure.sharefile.com/oauth/token',
       }
 
-      Rails.logger.info raw_info.to_json
+      Rails.logger.info raw_info
 
       # uid { raw_info["user"]["id"] }
       #
