@@ -16,7 +16,7 @@ module OmniAuth
         :token_url     => 'https://secure.sharefile.com/oauth/token',
       }
 
-      uid { raw_info["user"]["id"] }
+      # uid { raw_info["user"]["id"] }
       #
       # info do
       #   {
