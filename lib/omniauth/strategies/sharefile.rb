@@ -6,18 +6,20 @@ require 'uri'
 
 module OmniAuth
   module Strategies
-    class Rescuetime < OmniAuth::Strategies::OAuth2
+    class Sharefile < OmniAuth::Strategies::OAuth2
 
       option :name, :rescuetime
 
       option :client_options, {
-        :site          => 'https://www.rescuetime.com/api/oauth/data/',
-        :authorize_url => 'https://www.rescuetime.com/oauth/authorize/',
-        :token_url     => 'https://www.rescuetime.com/oauth/token/',
+        :site          => 'https://api.sharefile.com/https/oauth2.aspx',
+        :authorize_url => 'https://secure.sharefile.com/oauth/authorize',
+        :token_url     => 'https://secure.sharefile.com/oauth/token',
       }
 
+      Rails.logger.info raw_info.to_json
+
       # uid { raw_info["user"]["id"] }
-      # 
+      #
       # info do
       #   {
       #     :email    => raw_info["user"]["email"],

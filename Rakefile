@@ -15,9 +15,9 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "omniauth-rescuetime"
-  gem.homepage = "http://github.com/backstitch/omniauth-rescuetime"
+  gem.homepage = "http://github.com/backstitch/omniauth-sharefile"
   gem.license = "Proprietary"
-  gem.summary = %Q{RescueTime Omniauth stratagy}
+  gem.summary = %Q{Sharefile Omniauth stratagy}
   gem.email = "admin@backstit.ch"
   gem.authors = ["backstitch Inc."]
   gem.files.exclude "spec/*"
@@ -38,10 +38,10 @@ task :default => :spec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('lib/omniauth-rescuetime/version.rb') ? File.read('lib/omniauth-rescuetime/version.rb') : ""
+  version = File.exist?('lib/omniauth-sharefile/version.rb') ? File.read('lib/omniauth-sharefile/version.rb') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "omniauth-rescuetime #{version}"
+  rdoc.title = "omniauth-sharefile #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

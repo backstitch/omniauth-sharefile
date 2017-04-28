@@ -4,7 +4,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "omniauth-rescuetime"
+  s.name = "omniauth-sharefile"
   s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -21,16 +21,16 @@ Gem::Specification.new do |s|
     "RELEASE_NOTES.md",
     "Rakefile",
     "VERSION",
-    "lib/omniauth-rescuetime.rb",
-    "lib/omniauth-rescuetime/version.rb",
-    "lib/omniauth/strategies/rescuetime.rb",
-    "omniauth-rescuetime.gemspec"
+    "lib/omniauth-sharefile.rb",
+    "lib/omniauth-sharefile/version.rb",
+    "lib/omniauth/strategies/sharefile.rb",
+    "omniauth-sharefile.gemspec"
   ]
-  s.homepage = "http://github.com/backstitch/omniauth-rescuetime"
+  s.homepage = "http://github.com/backstitch/omniauth-sharefile"
   s.licenses = ["Proprietary"]
   s.require_paths = ["lib"]
   s.rubygems_version = "2.0.6"
-  s.summary = "RescueTime Omniauth stratagy"
+  s.summary = "Sharefile Omniauth stratagy"
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
