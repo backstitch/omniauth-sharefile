@@ -8,7 +8,7 @@ module OmniAuth
   module Strategies
     class Sharefile < OmniAuth::Strategies::OAuth2
 
-      option :name, :rescuetime
+      option :name, :sharefile
 
       option :client_options, {
         :site          => 'https://api.sharefile.com/https/oauth2.aspx',
@@ -30,7 +30,7 @@ module OmniAuth
       extra { raw_info }
 
       def raw_info
-        Rails.logger.info @raw_info
+        # Rails.logger.info @raw_info
 
         @raw_info ||= {}
       end

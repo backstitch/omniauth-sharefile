@@ -14,7 +14,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "omniauth-rescuetime"
+  gem.name = "omniauth-sharefile"
   gem.homepage = "http://github.com/backstitch/omniauth-sharefile"
   gem.license = "Proprietary"
   gem.summary = %Q{Sharefile Omniauth stratagy}
