@@ -16,10 +16,6 @@ module OmniAuth
         :token_url     => 'https://secure.sharefile.com/oauth/token',
       }
 
-      option :authorize_params, {
-        resource: 'https://account.sf-api.com/sf/'
-      }
-
 
       # uid { raw_info["user"]["id"] }
       #
@@ -35,7 +31,8 @@ module OmniAuth
       extra { raw_info }
 
       def raw_info
-        @raw_info ||= access_token.get(authorize_params.resource + 'v3/Users').parsed
+        Rails.logger.info params
+        @raw_info ||= access_token.get('https://account.sf-api.com/sf/v3/Users').parsed
       end
 
     end
