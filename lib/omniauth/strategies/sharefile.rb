@@ -31,7 +31,7 @@ module OmniAuth
       extra { raw_info }
 
       def raw_info
-        Rails.logger.info params
+        Rails.logger.info request.params
         @raw_info ||= access_token.get('https://account.sf-api.com/sf/v3/Users').parsed
       end
 
