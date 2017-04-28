@@ -16,9 +16,7 @@ module OmniAuth
         :token_url     => 'https://secure.sharefile.com/oauth/token',
       }
 
-      Rails.logger.info raw_info
-
-      # uid { raw_info["user"]["id"] }
+      uid { raw_info["user"]["id"] }
       #
       # info do
       #   {
@@ -32,6 +30,8 @@ module OmniAuth
       extra { raw_info }
 
       def raw_info
+        Rails.logger.info @raw_info
+
         @raw_info ||= {}
       end
 
