@@ -11,27 +11,27 @@ module OmniAuth
       option :name, :sharefile
 
       option :client_options, {
-        :site          => 'https://api.sharefile.com/https/oauth2.aspx',
+        :site          => 'https://secure.sharefile.com/oauth/authorize',
         :authorize_url => 'https://secure.sharefile.com/oauth/authorize',
         :token_url     => 'https://secure.sharefile.com/oauth/token',
       }
 
 
-      # uid { raw_info["user"]["id"] }
-      #
-      # info do
-      #   {
-      #     :email    => raw_info["user"]["email"],
-      #     :name     => raw_info["user"]["display_name"],
-      #     :nickname => raw_info["user"]["username"],
-      #     :image    => raw_info["user"]["avatar"]
-      #   }
-      # end
+      uid { raw_info["Id"] }
+
+      info do
+        {
+          :email    => raw_info["Email"],
+          :first_name => raw_info["FirstName"],
+          :last_name => raw_info["LastName"],
+          :name     => raw_info["FullName"],
+          :nickname => raw_info["FullName"]
+        }
+      end
 
       extra { raw_info }
 
       def raw_info
-        Rails.logger.info request.params
         @raw_info ||= access_token.get("https://#{request.params['subdomain']}.sf-api.com/sf/v3/Users").parsed
       end
 
